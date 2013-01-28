@@ -1,0 +1,11 @@
+<br/>
+<h2>You've made it!</h2>
+<p>Welcome to Ice, the internal communication system of Ice!</p>
+
+
+  <div class="row">
+    <div class="span4"><br/></div>
+    <div class="span3">
+    <h2>Activity log</h2>
+    </div>
+  </div>

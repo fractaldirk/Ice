@@ -1,0 +1,56 @@
+<%= form_for @expense, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:type, [['Start-Up', '2'], ['Blue Robin', '1'], ['Other', '3']], :prompt => "Choose cost category") %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :company, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :company, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :payment_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:type, [['CreditCard Dirk', '1'], ['Online banking Dirk', '2'], ['Online banking Andy', '3'], ['Other', '4']], :include_blank => true) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :date_payment, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :date_payment, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :amount, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :amount, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ongoing, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :ongoing, :class => 'check_box' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                expenses_path, :class => 'btn' %>
+  </div>
+<% end %>
