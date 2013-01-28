@@ -21,11 +21,11 @@
       <tr>
         <td><%= link_to expense.id, expense_path(expense) %></td>
         <td><%= link_to expense.title, expense_path(expense), :style => "color: #280000;" %></td>
-        <td><%= expense.type %></td>
+        <td><%= expense.type_output %></td>
         <td><%= expense.company %></td>
-        <td><%= expense.payment_type %></td>
-        <td><%= expense.date_payment %></td>
+        <td><%= expense.payment_type_output %></td>
         <td><%= expense.amount %></td>
+        <td><%= expense.date_payment %></td>
         <td><%= expense.ongoing %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

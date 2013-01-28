@@ -9,15 +9,17 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @expense.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:type) %>:</strong></dt>
-  <dd><%= @expense.type %></dd>
+  <dd><%= @expense.type_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:company) %>:</strong></dt>
   <dd><%= @expense.company %></dd>
   <dt><strong><%= model_class.human_attribute_name(:payment_type) %>:</strong></dt>
-  <dd><%= @expense.payment_type %></dd>
+  <dd><%= @expense.payment_type_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:date_payment) %>:</strong></dt>
   <dd><%= @expense.date_payment %></dd>
   <dt><strong><%= model_class.human_attribute_name(:amount) %>:</strong></dt>
-  <dd><%= @expense.amount %></dd>
+  <dd><%= number_to_currency(@expense.amount, :unit => "€") %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tax) %>:</strong></dt>
+  <dd><%= number_to_currency(@expense.tax, :unit => "€") %></dd>
   <dt><strong><%= model_class.human_attribute_name(:ongoing) %>:</strong></dt>
   <dd><%= @expense.ongoing %></dd>
   <dt><strong><%= model_class.human_attribute_name(:created_at) %>:</strong></dt>

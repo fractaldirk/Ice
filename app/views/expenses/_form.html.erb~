@@ -26,13 +26,13 @@
   <div class="control-group">
     <%= f.label :payment_type, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select(:type, [['CreditCard Dirk', '1'], ['Online Dirk', '2'], ['Online Andy', '3'], ['Other', '4']], :include_blank => true) %>
+      <%= f.select(:payment_type, [['CreditCard Dirk', '1'], ['Online banking Dirk', '2'], ['Online banking Andy', '3'], ['Other', '4']]) %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :date_payment, :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :date_payment, :class => 'date_select' %>
+      <%= f.date_select :date_payment, :class => 'date_select', :order => [:day, :month, :year], :start_year => 2013 %>
     </div>
   </div>
   <div class="control-group">

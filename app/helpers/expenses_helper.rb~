@@ -1,0 +1,25 @@
+module ExpensesHelper
+  include ActionView::Helpers::NumberHelper
+
+  def type_output
+    if 1
+      "Blue Robin"
+    elsif 2
+      "Start-Up"
+    elsif 3
+      "Other"
+    end
+  end
+
+  def payment_type_output
+    if 1
+      "CreditCard Dirk"
+    elsif 2
+      "Onine Banking Dirk"
+    elsif 3
+      "Online Banking Andy"
+    elsif 4
+      "Other"
+    end
+  end
+end
