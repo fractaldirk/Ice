@@ -7,7 +7,7 @@ class Task < ActiveRecord::Base
     elsif by_whom == 2
       "Chef Walnoot"
     elsif by_whom == 3
-      "Free to pick"
+      "Free"
     end
   end
 
