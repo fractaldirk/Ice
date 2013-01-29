@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to task.title, task_path(task), :style => "color: #280000;" %></td>
         <td><%= truncate(task.description, :lenght => 24) %></td>
-        <td><%= task.due_date %></td>
+        <td><%= task.due_date.strftime("%d %b %Y") unless task.due_date.nil? %></td>
         <td><%= task.by_whom_output %></td>
         <td><%= task.status_output %></td>
         <td>

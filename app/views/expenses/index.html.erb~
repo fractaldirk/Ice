@@ -24,8 +24,8 @@
         <td><%= expense.type_output %></td>
         <td><%= expense.company %></td>
         <td><%= expense.payment_type_output %></td>
-        <td><%= expense.amount %></td>
-        <td><%= expense.date_payment %></td>
+        <td><%= number_to_currency(expense.amount, :unit => "€") %></td>
+        <td><%= expense.date_payment.strftime("%d %B %Y") unless expense.date_payment.nil? %></td>
         <td><%= expense.ongoing %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

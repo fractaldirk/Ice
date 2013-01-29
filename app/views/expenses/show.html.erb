@@ -15,7 +15,7 @@
   <dt><strong><%= model_class.human_attribute_name(:payment_type) %>:</strong></dt>
   <dd><%= @expense.payment_type_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:date_payment) %>:</strong></dt>
-  <dd><%= @expense.date_payment %></dd>
+  <dd><%= @expense.date_payment.strftime("%d %B %Y") unless @expense.date_payment.nil? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:amount) %>:</strong></dt>
   <dd><%= number_to_currency(@expense.amount, :unit => "€") %></dd>
   <dt><strong><%= model_class.human_attribute_name(:tax) %>:</strong></dt>

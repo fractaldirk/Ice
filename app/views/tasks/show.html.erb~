@@ -13,7 +13,7 @@
   <dt><strong><%= model_class.human_attribute_name(:by_whom) %>:</strong></dt>
   <dd><%= @task.by_whom_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
-  <dd><%= @task.status %></dd>
+  <dd><%= @task.status_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:dropbox_location) %>:</strong></dt>
   <dd><%= @task.dropbox_location %></dd>
 </dl>
