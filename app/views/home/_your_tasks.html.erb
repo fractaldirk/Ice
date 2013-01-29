@@ -14,7 +14,7 @@
       <% if current_user.position == task.by_whom %>
       <% unless task.status == 3 %>
       <tr>
-        <td><%= task.due_date %></td>
+        <td><%= task.due_date.strftime("%d %b %Y") unless task.due_date.nil? %></td>
         <td><%= link_to task.title, task_path(task), :style => "color: #280000;" %></td>
         <td><%= truncate(task.description, :lenght => 50) %></td>
         <td><%= task.status_output %></td>
