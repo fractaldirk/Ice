@@ -8,6 +8,8 @@ class Task < ActiveRecord::Base
       "Chef Walnoot"
     elsif by_whom == 3
       "Free"
+    elsif by_whom == 4
+      "Pep"
     end
   end
 

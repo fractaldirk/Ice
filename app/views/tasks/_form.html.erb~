@@ -20,7 +20,7 @@
   <div class="control-group">
     <%= f.label :by_whom, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select(:by_whom, [['Open', '3'], ['Chef', '1'], ['Chef Walnoot', '2']]) %>
+      <%= f.select(:by_whom, [['Free', '4'], ['Chef', '1'], ['Chef Walnoot', '2'], ['Chef Jansen', '3']]) %>
     </div>
   </div>
   <div class="control-group">
@@ -32,7 +32,7 @@
   <div class="control-group">
     <%= f.label :dropbox_location, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :dropbox_location, :class => 'text_field', :placeholder => 'online link' %>
+      <%= f.text_field :dropbox_location, :class => 'text_field', :placeholder => 'Put here the direct online link' %>
     </div>
   </div>
 
