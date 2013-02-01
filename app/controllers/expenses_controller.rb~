@@ -1,4 +1,5 @@
 class ExpensesController < ApplicationController
+
   # GET /expenses
   # GET /expenses.json
   def index

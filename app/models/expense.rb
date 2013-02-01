@@ -17,7 +17,7 @@ class Expense < ActiveRecord::Base
       "Start-Up Iceflag"
     elsif type == 3
       "Investment Iceflag"
-    elsif == type 4
+    elsif type == 4
       "Other"
     end
   end

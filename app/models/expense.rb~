@@ -14,8 +14,10 @@ class Expense < ActiveRecord::Base
     if type == 1
       "Blue Robin"
     elsif type == 2
-      "Start-Up"
+      "Start-Up Iceflag"
     elsif type == 3
+      "Investment Iceflag"
+    elsif == type 4
       "Other"
     end
   end
