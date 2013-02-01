@@ -15,7 +15,7 @@
   <%= f.text_field :user_name %></div>
 
   <div><%= f.label :position %><br />
-  <%= f.select(:position, [['Chef', '1'], ['Chef Walnoot', '2'], ['Chef Jansen', '3']]) %></div>
+  <%= f.select(:position, [['Chef', '1'], ['Chef Walnoot', '2'], ['Chef Jansen', '4']]) %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
