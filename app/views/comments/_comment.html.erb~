@@ -1,0 +1,10 @@
+<p>
+  <%= comment.commenter %>: <em style="color: #0000CC;"><%= simple_format comment.body %></em>
+</p>
+
+<p>
+  <%= link_to 'Delete Comment', [comment.post, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete, :class => 'btn-mini btn-info' %>
+</p>
+<hr />

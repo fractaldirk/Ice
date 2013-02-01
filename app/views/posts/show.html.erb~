@@ -1,0 +1,33 @@
+<%- model_class = Post -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<p><em>by <%= @post.poster %></em></p>
+<h4><%= @post.title %></h4>
+<p><%= simple_format @post.body %></p>
+  <% if @post.dropbox_location.present? %>
+    <p>Dropbox location: <%= @post.dropbox_location %></p>
+  <% end %>
+
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_post_path(@post), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              post_path(@post),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
+<hr />
+
+<% if @post.comments.present? %>
+  <h4 style="color: #C00000;">Comments</h4>
+  <p style="color: #330000;"><%= render @post.comments %><hr /></p>
+<% end %>
+
+<h4 style="color: #C00000;">Add a comment:</h4>
+<%= render "comments/form" %>

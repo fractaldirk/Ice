@@ -1,7 +1,7 @@
 <br/>
-<h2>You've made it!</h2>
-<p>Welcome to Ice, the internal communication system of Ice!</p>
-<p>In the future this page will contain an activity log and more, for now it is a work in progress.</p>
+<h4>Welcome <%= current_user.user_name %>!</h4>
+
+  <p></p>
 <br/>
   <h4>My tasks</h4>
   <%= render 'your_tasks' %>

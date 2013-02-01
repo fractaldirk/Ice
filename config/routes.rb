@@ -1,5 +1,9 @@
 Ice::Application.routes.draw do
 
+  resources :posts do
+    resources :comments
+  end
+
   devise_for :users
 
   resources :tasks
