@@ -11,7 +11,7 @@
 
   <% @posts.each do |post| %>
 
-  <h2><%= link_to post.title, post_path(post) %></h2>
+  <h2><%= link_to post.title, post_path(post) %><%= post.comments.count %></h2>
   <p><em><%= post.created_at.strftime("%d %b %Y") unless post.created_at.nil? %></em></p>
   <p><%= simple_format truncate(post.body, :length => 75) %></p>
   <p><%= link_to t('.edit', :default => t("helpers.links.edit")), edit_post_path(post), :class => 'btn btn-mini' %></p>

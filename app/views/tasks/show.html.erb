@@ -15,7 +15,7 @@
   <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
   <dd><%= @task.status_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:dropbox_location) %>:</strong></dt>
-  <dd><%= @task.dropbox_location %></dd>
+  <dd><%= link_to "Task(link)", @task.dropbox_location , :target => "_blank" %></dd>
 </dl>
 
 <div class="form-actions">

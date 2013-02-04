@@ -9,13 +9,13 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @task.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:due_date) %>:</strong></dt>
-  <dd><%= @task.due_date %></dd>
+  <dd><%= @task.due_date.strftime("%d %B %Y") unless @task.due_date.nil? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:by_whom) %>:</strong></dt>
   <dd><%= @task.by_whom_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
   <dd><%= @task.status_output %></dd>
   <dt><strong><%= model_class.human_attribute_name(:dropbox_location) %>:</strong></dt>
-  <dd><%= @task.dropbox_location %></dd>
+  <dd><%= link_to "Task(dropbox)", @task.dropbox_location , :target => "_blank" %></dd>
 </dl>
 
 <div class="form-actions">

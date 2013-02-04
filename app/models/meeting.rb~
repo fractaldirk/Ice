@@ -1,0 +1,3 @@
+class Meeting < ActiveRecord::Base
+  attr_accessible :agenda, :attendents, :content, :meeting_date, :place, :title
+end

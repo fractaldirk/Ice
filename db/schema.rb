@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203154104) do
+ActiveRecord::Schema.define(:version => 20130204171608) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(:version => 20130203154104) do
     t.date     "date_payment"
     t.decimal  "amount"
     t.boolean  "ongoing"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "meetings", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "agenda"
+    t.string   "attendents"
+    t.string   "place"
+    t.date     "meeting_date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

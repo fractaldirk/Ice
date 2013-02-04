@@ -1,5 +1,7 @@
 Ice::Application.routes.draw do
 
+  resources :meetings
+
   resources :posts do
     resources :comments
   end
