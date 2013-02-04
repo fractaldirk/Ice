@@ -1,4 +1,4 @@
 <% @posts.each do |post| %>
-  <strong><%= post.title %></strong><br/>
+  <strong><%= link_to post.title, post_path(post) %></strong><br/>
   <em><%= simple_format truncate(post.body, :length => 120) %></em><hr />
 <% end %>

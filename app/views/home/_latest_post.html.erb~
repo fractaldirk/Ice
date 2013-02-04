@@ -1,4 +1,4 @@
 <% @posts.each do |post| %>
   <strong><%= post.title %></strong><br/>
-  <em><%= truncate(post.body, :length => 120) %></em><hr />
+  <em><%= simple_format truncate(post.body, :length => 120) %></em><hr />
 <% end %>
