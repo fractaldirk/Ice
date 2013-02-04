@@ -1,6 +1,10 @@
 Ice::Application.routes.draw do
 
-  resources :posts
+  resources :meetings
+
+  resources :posts do
+    resources :comments
+  end
 
   devise_for :users
 
@@ -8,6 +12,7 @@ Ice::Application.routes.draw do
 
   resources :expenses
 
+  get "home/cheap-ass" => 'home#financials'
   resources :home
 
   # The priority is based upon order of creation:

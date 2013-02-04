@@ -12,6 +12,7 @@ Ice::Application.routes.draw do
 
   resources :expenses
 
+  get "/cheap-ass" => 'home#financials'
   resources :home
 
   # The priority is based upon order of creation:

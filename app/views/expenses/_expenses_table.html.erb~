@@ -1,0 +1,33 @@
+<h4>Iceflag financial overview</h4>
+<table class="table">
+  <tr>
+    <th>Category</th>
+    <th>Type</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Start-Up IceFlag</td>
+    <td>Investment</td>
+    <td><%= Expense.sum(:amount, :conditions => {:ongoing => false, :type => 2}) %></td>
+  </tr>
+  <tr>
+    <td>Start-Up IceFlag</td>
+    <td>Ongoing</td>
+    <td><%= Expense.sum(:amount, :conditions => {:ongoing => true, :type => 2}) %></td>
+  </tr>
+  <tr>
+    <td>Investment IceFlag</td>
+    <td>Investment</td>
+    <td><%= Expense.sum(:amount, :conditions => {:ongoing => false, :type => 3}) %></td>
+  </tr>
+  <tr>
+    <td>Investment IceFlag</td>
+    <td>Ongoing</td>
+    <td><%= Expense.sum(:amount, :conditions => {:ongoing => true, :type => 3}) %></td>
+  </tr>
+  <tr>
+    <td>Other (unallocated)</td>
+    <td>Inv+Ongoing</td>
+    <td><%= Expense.sum(:amount, :conditions => {:type => 4}) %></td>
+  </tr>
+</table>

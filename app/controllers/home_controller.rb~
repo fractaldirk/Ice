@@ -4,6 +4,10 @@ class HomeController < ApplicationController
     @tasks = Task.all
     @comments = Comment.find(:all, :order => 'created_at DESC', :limit => 4)
     @posts = Post.find(:all, :order => 'created_at DESC', :limit => 1)
-    @meetings = Meeting.find(:all, :order => 'meeting_date ASC', :limit => 2)
+    @meetings = Meeting.find(:all, :order => 'meeting_date ASC')
+  end
+
+  def cheap_ass
+
   end
 end

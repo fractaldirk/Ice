@@ -6,4 +6,8 @@ class HomeController < ApplicationController
     @posts = Post.find(:all, :order => 'created_at DESC', :limit => 1)
     @meetings = Meeting.find(:all, :order => 'meeting_date ASC')
   end
+
+  def financials
+
+  end
 end
