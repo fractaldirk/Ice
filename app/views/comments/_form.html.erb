@@ -6,7 +6,12 @@
   <div class="field">
     <%= f.text_area :body, :class => 'comment' %>
   </div>
+  <div class="hidden">
+    <%= f.text_field :post_name, :value => @post.title %>
+    <%= f.text_field :description, :value => activity_description %>
+  </div>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
+
 <% end %>

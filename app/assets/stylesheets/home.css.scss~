@@ -3,5 +3,5 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h4 {
-  color: #C00000;
+  color: #0000FF;
 }

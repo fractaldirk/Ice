@@ -1,8 +1,15 @@
 <br/>
-<h4>Welcome <%= current_user.user_name %>!</h4>
+<h6>Welcome back <%= current_user.user_name %>!</h6>
 <hr />
+  <div class="span5">
+    <h4>Latest blog</h4>
+    <%= render 'latest_post' %>
+    <h4>My tasks</h4>
+    <%= render 'your_tasks' %>
+  </div>
+  <div class="span4">
+    <h4>Latest comments</h4>
+    <%= render 'comments_activity' %>
+  </div>
 
-  <p></p>
 <br/>
-  <h4>My tasks</h4>
-  <%= render 'your_tasks' %>

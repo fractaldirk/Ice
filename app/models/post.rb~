@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :dropbox_location, :poster, :title
-  has_many :comments
+  attr_accessible :body, :dropbox_location, :poster, :title, :activities_attributes
+  has_many :comments, :dependent => :destroy
 end

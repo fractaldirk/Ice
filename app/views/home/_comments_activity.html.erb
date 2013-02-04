@@ -1,0 +1,7 @@
+<% @comments.each do |comment| %>
+<div class="acitivity_log">
+  <%= comment.description %><br/>
+  <strong>...<%= truncate(comment.body, :length => 65) %></strong><br/>
+<hr />
+</div>
+<% end %>

@@ -1,0 +1,4 @@
+class Activity < ActiveRecord::Base
+  attr_accessible :description, :post_name, :user_id, :user_name
+  belongs_to :post
+end
