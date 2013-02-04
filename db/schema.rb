@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20130204171608) do
     t.string   "agenda"
     t.string   "attendents"
     t.string   "place"
-    t.date     "meeting_date"
+    t.datetime "meeting_date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

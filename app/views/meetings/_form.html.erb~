@@ -8,13 +8,13 @@
   <div class="control-group">
     <%= f.label :meeting_date, :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :meeting_date, :class => 'date_select' %>
+      <%= f.datetime_select :meeting_date, :class => 'date_select' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :content, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_area :content, :class => 'text_area' %>
+      <%= f.text_area :content, :class => 'text_area', :placeholder => "Short description of the meeting, e.g. the purpose." %>
     </div>
   </div>
   <div class="control-group">

@@ -6,7 +6,7 @@ class CreateMeetings < ActiveRecord::Migration
       t.string :agenda
       t.string :attendents
       t.string :place
-      t.datetime :meeting_date
+      t.date :meeting_date
 
       t.timestamps
     end

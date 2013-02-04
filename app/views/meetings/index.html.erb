@@ -18,7 +18,7 @@
         <td><%= link_to meeting.title, meeting_path(meeting) %></td>
         <td><%= meeting.attendents %></td>
         <td><%= meeting.place %></td>
-        <td><%= meeting.meeting_date.strftime("%d %B %Y") unless meeting.meeting_date.nil? %></td>
+        <td><%= meeting.meeting_date.strftime("%d %B %Y (%H:%M)") unless meeting.meeting_date.nil? %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_meeting_path(meeting), :class => 'btn btn-mini' %>

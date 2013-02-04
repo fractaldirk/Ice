@@ -7,7 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @meeting.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:meeting_date) %>:</strong></dt>
-  <dd><%= @meeting.meeting_date %></dd>
+  <dd><%= @meeting.meeting_date.strftime("%d %B %Y (%H:%M)") unless @meeting.meeting_date.nil? %></dd>
   <% if @meeting.content.present? %>
     <dt><strong><%= model_class.human_attribute_name(:content) %>:</strong></dt>
     <dd><%= @meeting.content %></dd>
