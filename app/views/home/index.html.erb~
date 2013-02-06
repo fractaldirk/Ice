@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="assets\images\favicon.ico">
 <br/>
 <h6>Welcome back <%= current_user.user_name %>!</h6>
 <hr />
@@ -9,7 +10,6 @@
   </div>
   <div class="span4">
     <%= render 'upcoming_appointments' %><br/><br/>
-    <iframe src="http://embed.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
     <h4>Latest comments</h4>
     <%= render 'comments_activity' %>
   </div>
