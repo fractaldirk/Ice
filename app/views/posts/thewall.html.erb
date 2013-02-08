@@ -1,0 +1,14 @@
+<br/>
+<div class="thewall">
+  <h1>The Wall</h1>
+
+  <hr />
+
+<%= render "modal_form" %>
+
+  <% if @post.comments.present? %>
+    <h4 style="color: #C00000;">News feeds:</h4>
+    <p style="color: #330000;"><%= render @post.comments.order("created_at DESC") %><hr /></p>
+  <% end %>
+
+</div>

@@ -1,12 +1,11 @@
 <% if comment.body.present? %>
 
   <p>
-    <%= comment.commenter %>:<br/>
-    <em style="color: #0000FF;"><%= raw(comment.body) %></em>
+    <%= comment.commenter %>: <em style="color: #0000FF;"><%= simple_format comment.body %></em>
   </p>
 
   <p>
-    <%= link_to 'Delete', [comment.post, comment],
+    <%= link_to 'Delete news feed', [comment.post, comment],
                  :confirm => 'Are you sure?',
                  :method => :delete, :class => 'btn-mini btn-info' %>
   </p>

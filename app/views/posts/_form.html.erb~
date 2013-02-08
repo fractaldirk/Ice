@@ -17,10 +17,11 @@
       <%= f.text_field :dropbox_location, :class => 'text_field' %>
     </div>
   </div>
-  <div class="hidden_field">
+  <div class="dhidden">
     <%= f.label :poster, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :poster, :class => 'text_field', :value => current_user.user_name %>
+      <%= f.number_field :sort, :value => 1 %>
     </div>
   </div>
 

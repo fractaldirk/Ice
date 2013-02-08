@@ -2,6 +2,7 @@ Ice::Application.routes.draw do
 
   resources :meetings
 
+  match 'posts/thewall' => 'posts#thewall'
   resources :posts do
     resources :comments
   end

@@ -11,6 +11,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def thewall
+    @post = Post.find(1)
+
+    respond_to do |format|
+      format.html # thewall.html.erb
+      format.json { render json: @post }
+    end
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
