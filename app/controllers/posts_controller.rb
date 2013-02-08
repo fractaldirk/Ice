@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def thewall
-    @post = Post.find(7)
+    @post = Post.find(9)
 
     respond_to do |format|
       format.html # thewall.html.erb

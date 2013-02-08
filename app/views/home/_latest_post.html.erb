@@ -1,4 +1,6 @@
 <% @posts.each do |post| %>
-  <strong><%= link_to post.title, post_path(post) %></strong><br/>
-  <em><%= simple_format truncate(post.body, :length => 120) %></em><hr />
+  <% unless post.sort == 1 %>
+    <strong><%= link_to post.title, post_path(post) %></strong><br/>
+    <em><%= simple_format truncate(post.body, :length => 120) %></em><hr />
+  <% end %>
 <% end %>
