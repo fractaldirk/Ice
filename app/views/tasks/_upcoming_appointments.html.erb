@@ -1,0 +1,15 @@
+<blockquote class="pull-left">
+  <h2>Upcoming Appointments</h2>
+  <small>Latest appointments</small>
+</blockquote>
+
+<div class="appointments">
+  <% @meetings.each do |meeting|  %>
+    <% unless meeting.display_meeting < 0 %>
+      <blockquote class="pull-right">
+      <p><strong><%= meeting.meeting_date.strftime("%d %B %Y at %H:%M") unless meeting.meeting_date.nil? %></strong>, <%= meeting.title %> @ <%= meeting.place %></p>
+      <small>Attendents: <cite title="Source Title"><%= meeting.attendents %></cite></small>
+      </blockquote><br/><br/>
+    <% end %>
+  <% end %>
+</div>

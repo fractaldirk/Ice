@@ -19,7 +19,7 @@
       </div>
       <div class="hidden">
         <%= f.text_field :post_name, :value => @post.title %>
-        <%= f.text_field :description, :value => activity_description %>
+        <%= f.text_field :description, :value => wall_activity_description %>
       </div>
       <div class="form-actions">
         <%= f.submit nil, :class => 'btn btn-primary', :name => "wall_button" %>

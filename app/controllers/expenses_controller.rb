@@ -11,6 +11,10 @@ class ExpensesController < ApplicationController
     end
   end
 
+  def financials
+
+  end
+
   # GET /expenses/1
   # GET /expenses/1.json
   def show

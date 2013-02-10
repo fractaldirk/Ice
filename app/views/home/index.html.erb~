@@ -1,17 +1,19 @@
-<link rel="shortcut icon" href="assets\images\favicon.ico">
 <br/>
-<h6>Welcome back <%= current_user.user_name %>!</h6>
-<hr />
-  <div class="span5">
-    <h4>Latest blog</h4>
-    <%= render 'latest_post' %>
-    <h4>My tasks</h4>
-    <%= render 'your_tasks' %>
-  </div>
-  <div class="span4">
-    <%= render 'upcoming_appointments' %><br/><br/>
-    <h4>Latest comments</h4>
-    <%= render 'comments_activity' %>
-  </div>
-
 <br/>
+<br/>
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <%= link_to image_tag("interactive.jpg"), "/posts/overview", :alt => "" %>
+      <h3>Interactive</h3>
+      <p>Strategy, industry news and random ideas can be shared here..</p>
+    </div>
+  </li>
+  <li class="span4">
+    <div class="thumbnail">
+      <%= link_to image_tag("process.jpg"), expenses_path, :alt => "" %>
+      <h3>Processes</h3>
+      <p>Tasks, appointments, expenses and milestones can be reviewed here..</p>
+    </div>
+  </li>
+</ul>

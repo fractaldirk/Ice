@@ -1,0 +1,13 @@
+<blockquote class="pull-left">
+  <h2>Expenses</h2>
+  <small>Got a dollar in my pocket..</small>
+</blockquote>
+
+
+<table class="table">
+  <% @expenses.each do |expense|  %>
+    <tr>
+      <th>We spent <strong>€ <%= expense.amount %></strong> on <strong><%= expense.title %></strong></th>
+    </tr>
+  <% end %>
+</table>

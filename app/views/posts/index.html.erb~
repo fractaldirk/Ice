@@ -1,22 +1,34 @@
-<%- model_class = Post -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<div class="span1">
+  <div class="btn-group btn-group-vertical">
+    <%= link_to 'Back', "/posts/overview", :class => "btn btn-warning" %><br/>
+    <%= link_to t('.new', :default => t("helpers.links.new")),
+                new_post_path,
+                :class => 'btn btn-primary' %>
+  </div>
 </div>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_post_path,
-            :class => 'btn btn-primary' %>
+<div class="span10">
+  <%- model_class = Post -%>
+  <div class="page-header">
+    <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+  </div>
 
-<div id="posts">
+  <div id="posts">
 
-  <% @posts.each do |post| %>
+    <% @posts.each do |post| %>
+      <% unless post.sort == 1 %>
 
-    <h2><%= link_to post.title, post_path(post) %> (<%= post.comments.count %>)</h2>
-    <p><em><%= post.created_at.strftime("%d %b %Y") unless post.created_at.nil? %></em></p>
-    <p><%= simple_format truncate(post.body, :length => 75) %></p>
-    <p><%= link_to t('.edit', :default => t("helpers.links.edit")), edit_post_path(post), :class => 'btn btn-mini' %></p>
+        <h2><%= link_to post.title, post_path(post) %> (<%= post.comments.count %>)</h2>
+        <p><em><%= post.created_at.strftime("%d %b %Y") unless post.created_at.nil? %></em></p>
+        <p><%= simple_format truncate(post.body, :length => 75) %></p>
+        <hr />
+      <% end %>
+    <% end %>
 
-  <% end %>
+  <hr />
+  </div>
+</div>
 
-<hr />
+<div class="span1">
+  <br/>
 </div>

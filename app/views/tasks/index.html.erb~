@@ -5,7 +5,6 @@
   <%= link_to t('.new', :default => t("helpers.links.new")),
             new_task_path,
             :class => 'btn btn-primary' %>
-<br/>
 <div class="open_box">
   <h4>Feel free to pick a task! ;)</h4>
   <%= render 'open_tasks' %>

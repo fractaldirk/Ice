@@ -20,6 +20,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def overview
+    @posts = Post.find(:all, :order => "created_at DESC", :limit => 4)
+    @comments = Comment.find(:all, :order => 'created_at DESC', :limit => 4)
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show

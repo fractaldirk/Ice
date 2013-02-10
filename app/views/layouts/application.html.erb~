@@ -5,6 +5,7 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
+  <%= favicon_link_tag "/favicon.ico" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -22,32 +23,11 @@
         <%= link_to 'Home', home_index_path, :class => 'brand' %>
         <div class="nav-collapse">
           <ul class="nav">
-            <li class="dropdown">
-              <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Finance <b class="caret"></b></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-                <li role="presentation">
-                  <%= link_to 'Expenses', expenses_path, :role => "menuitem", :tabindex => "-1" %>
-                </li>
-                <li role="presentation">
-                  <%= link_to 'Overview', "/cheap-ass", :role => "menuitem", :tabindex => "-1" %>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Interactive <b class="caret"></b></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-                <li role="presentation">
-                  <%= link_to 'News Wall', posts_path, :role => "menuitem", :tabindex => "-1" %>
-                </li>
-                <li role="presentation" class="divider"></li>
-                <li role="presentation">
-                  <%= link_to 'Forum', posts_path, :role => "menuitem", :tabindex => "-1" %>
-                </li>
-              </ul>
-            </li>
+            <li><%= link_to 'Overview', "/tasks/overview" %></li>
             <li><%= link_to "Tasks", tasks_path %></li>
             <li><%= link_to "Appointments", meetings_path %></li>
-            <li><%= link_to "Company Profile" %></li>
+            <li><%= link_to "Expenses", expenses_path %></li>
+            <li><%= link_to 'Financial Overview', "/expenses/cheap-ass" %></li>
           </ul>
         </div>
       </div>
@@ -74,7 +54,6 @@
   <div class="row">
     <div class="span1"><br/></div>
     <div class="span10">
-      <br/>
       <%= yield %>
     </div>
     <div class="span2"><br/></div>

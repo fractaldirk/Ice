@@ -28,5 +28,18 @@
   background-image:url("newspaper.jpg");
   background-position:100% 20%;
   background-repeat:no-repeat;
+}
 
+.latest_comments {
+  padding-top: 120px;
+}
+
+.latest_blogs {
+  padding-top: 120px;
+}
+
+#new_button {
+  position: relative;
+  top: 85px;
+  left: 40px;
 }

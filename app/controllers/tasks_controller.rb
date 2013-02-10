@@ -11,6 +11,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def overview
+    @tasks = Task.find(:all, :order => 'due_date ASC')
+    @meetings = Meeting.find(:all, :order => 'meeting_date ASC')
+    @expenses = Expense.find(:all, :order => 'created_at DESC', :limit => 3)
+  end
+
   # GET /tasks/1
   # GET /tasks/1.json
   def show

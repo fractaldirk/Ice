@@ -1,14 +1,26 @@
-<br/>
-<div class="thewall">
-  <h1>The Wall</h1>
+<div class="span1">
+  <div class="btn-group btn-group-vertical">
+  <%= link_to 'Back', "/posts/overview", :class => "btn btn-warning" %>
+  <a href="#myModal" role="button" class="btn" data-toggle="modal">New</a>
+  </div>
+</div>
 
-  <hr />
+<div class="span10">
+  <div class="thewall">
+    <h1>The Wall</h1>
+    <p><strong>Description:</strong><em><%= simple_format @post.body %></em></p>
+    <hr />
 
-<%= render "modal_form" %>
+  <%= render "modal_form" %>
 
-  <% if @post.comments.present? %>
-    <h4 style="color: #C00000;">News feeds:</h4>
-    <p style="color: #330000;"><%= render @post.comments.order("created_at ASC") %><hr /></p>
-  <% end %>
+    <% if @post.comments.present? %>
+      <h4 style="color: #C00000;">News feeds:</h4>
+      <p style="color: #330000;"><%= render "thewall_comments" %><hr /></p>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="1">
 
 </div>

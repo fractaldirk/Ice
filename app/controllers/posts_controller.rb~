@@ -12,12 +12,17 @@ class PostsController < ApplicationController
   end
 
   def thewall
-    @post = Post.find(7)
+    @post = Post.find(9)
 
     respond_to do |format|
       format.html # thewall.html.erb
       format.json { render json: @post }
     end
+  end
+
+  def overview
+    @posts = Post.find(:all, :order => "created_at DESC", :limit => 2)
+    @comments = Comment.find(:all, :order => 'created_at DESC', :limit => 4)
   end
 
   # GET /posts/1

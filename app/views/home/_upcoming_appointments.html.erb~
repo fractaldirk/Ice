@@ -3,7 +3,7 @@
   <% @meetings.each do |meeting|  %>
     <% unless meeting.display_meeting < 0 %>
       <blockquote class="pull-right">
-      <p><strong><%= meeting.meeting_date.strftime("%H:%M on %d %B %Y") unless meeting.meeting_date.nil? %></strong>, <%= meeting.title %> @ <%= meeting.place %></p>
+      <p><strong><%= meeting.meeting_date.strftime("%d %B %Y at %H:%M") unless meeting.meeting_date.nil? %></strong>, <%= meeting.title %> @ <%= meeting.place %></p>
       <small>Attendents: <cite title="Source Title"><%= meeting.attendents %></cite></small>
       </blockquote><br/><br/>
     <% end %>

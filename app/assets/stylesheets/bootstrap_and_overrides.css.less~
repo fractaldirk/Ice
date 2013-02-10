@@ -12,10 +12,10 @@
 // Example:
 // @linkColor: #ff0000;
 
-@navbarBackground: #180000;
+@navbarBackground: #0099CC;
 
-@navbarBackgroundHighlight: #400000;
+@navbarBackgroundHighlight: navy;
 
 @navbarLinkColor: #E0E0E0;
 
-@navbarLinkColorHover: #C00000;
+@navbarLinkColorHover: #000000;

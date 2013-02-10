@@ -15,5 +15,5 @@
 .display_username {
   position: fixed;
   right: 50px;
-  top: 250px;
+  top: 50px;
 }

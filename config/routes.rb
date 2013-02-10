@@ -2,6 +2,7 @@ Ice::Application.routes.draw do
 
   resources :meetings
 
+  match 'posts/overview' => 'posts#overview'
   match 'posts/thewall' => 'posts#thewall'
   resources :posts do
     resources :comments
@@ -9,11 +10,12 @@ Ice::Application.routes.draw do
 
   devise_for :users
 
+  match 'tasks/overview' => 'tasks#overview'
   resources :tasks
 
+  match "expenses/cheap-ass" => 'expenses#financials'
   resources :expenses
 
-  get "/cheap-ass" => 'home#financials'
   resources :home
 
   # The priority is based upon order of creation:

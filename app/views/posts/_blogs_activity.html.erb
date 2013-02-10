@@ -1,0 +1,13 @@
+<blockquote class="pull-left">
+  <h2>Blogs</h2>
+  <small>Last posted blogs</small>
+</blockquote>
+
+<div class="latest_blogs">
+  <% @posts.each do |post| %>
+    <% unless post.sort == 1 %>
+      <h4><%= link_to post.title, post_path(post), :style => "color: navy;" %></h4>
+      <em><%= simple_format truncate(post.body, :length => 120) %></em><hr />
+    <% end %>
+  <% end %>
+</div>

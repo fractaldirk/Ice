@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-
+  before_filter :authenticate_user!
   # GET /tasks
   # GET /tasks.json
   def index
@@ -9,6 +9,12 @@ class TasksController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @tasks }
     end
+  end
+
+  def overview
+    @tasks = Task.find(:all, :order => 'due_date ASC')
+    @meetings = Meeting.find(:all, :order => 'meeting_date ASC')
+    @expenses = Expense.find(:all, :order => 'created_at DESC')
   end
 
   # GET /tasks/1

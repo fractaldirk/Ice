@@ -1,0 +1,16 @@
+<div class="quote">
+  <blockquote class="pull-right">
+  <h2>Comments</h2>
+  <small>Comments & Wall activity</small>
+  </blockquote>
+</div>
+
+<div class="latest_comments">
+  <% @comments.each do |comment| %>
+  <div class="acitivity_log">
+    <%= comment.description %><br/>
+    <strong><%= raw(comment.body) %></strong><br/>
+  <hr />
+  </div>
+  <% end %>
+</div>

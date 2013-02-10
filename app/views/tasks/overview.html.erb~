@@ -1,0 +1,9 @@
+<div class="span5">
+  <%= render "my_tasks" %>
+</div>
+
+<div class="span4">
+  <%= render "upcoming_appointments" %>
+  <hr />
+  <%= render "last_expenses" %>
+</div>

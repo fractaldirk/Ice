@@ -7,3 +7,25 @@
   border-width:5px;
   border-color:#006600;
 }
+
+.allocated_box {
+  border-style:solid;
+  border-width:5px;
+  border-color:#660000;
+}
+
+.open_box {
+  border-style:solid;
+  border-width:5px;
+  border-color:#6666FF;
+}
+
+.appointments {
+  position:relative;
+  padding-top: 100px;
+}
+
+.expenses {
+  position:relative;
+  padding-top: 200px;
+}

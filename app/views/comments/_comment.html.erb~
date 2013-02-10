@@ -1,7 +1,7 @@
 <% if comment.body.present? %>
 
   <p>
-    <%= comment.commenter %>:
+    <%= comment.commenter %>:<br/>
     <em style="color: #0000FF;"><%= raw(comment.body) %></em>
   </p>
 
