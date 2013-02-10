@@ -13,7 +13,7 @@ Ice::Application.routes.draw do
   match 'tasks/overview' => 'tasks#overview'
   resources :tasks
 
-  get "expenses/cheap-ass" => 'expenses#financials'
+  match "expenses/cheap-ass" => 'expenses#financials'
   resources :expenses
 
   resources :home
