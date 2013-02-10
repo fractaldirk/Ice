@@ -11,7 +11,7 @@
   </li>
   <li class="span4">
     <div class="thumbnail">
-      <%= link_to image_tag("process.jpg"), expenses_path, :alt => "" %>
+      <%= link_to image_tag("process.jpg"), "/tasks/overview", :alt => "" %>
       <h3>Processes</h3>
       <p>Tasks, appointments, expenses and milestones can be reviewed here..</p>
     </div>
