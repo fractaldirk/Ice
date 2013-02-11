@@ -1,7 +1,7 @@
 <div class="span1">
   <div class="btn-group btn-group-vertical">
   <%= link_to 'Back', "/posts/overview", :class => "btn btn-warning" %>
-  <a href="#myModal" role="button" class="btn" data-toggle="modal">New</a>
+  <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">New</a>
   </div>
 </div>
 
